@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 37 38% 98%;
+    --foreground: 0 0% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+
+    --primary: 299 56% 19%; /* Aubergine #4a154b */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 100% 97%; /* Canvas Lavender #f9f0ff */
+    --secondary-foreground: 0 0% 11%;
+
+    --muted: 37 25% 94%;
+    --muted-foreground: 0 0% 41%; /* Ink Mute #696969 */
+
+    --accent: 208 80% 36%; /* Link Blue #1264a3 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 14 79% 45%; /* Semantic Error #cc4117 */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%; /* Hairline #e6e6e6 */
+    --input: 0 0% 90%;
+    --ring: 299 56% 19%;
+
+    --radius: 1rem;
+
+    --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-hairline;
+  }
+  body {
+    @apply bg-[#fdfbf7] text-ink font-sans antialiased selection:bg-[#eedaff] selection:text-aubergine;
+    background-color: #fdfbf7;
+    background-image: 
+      radial-gradient(at 10% 10%, rgba(255, 240, 230, 0.85) 0px, transparent 55%),
+      radial-gradient(at 90% 15%, rgba(233, 216, 255, 0.8) 0px, transparent 55%),
+      radial-gradient(at 50% 85%, rgba(226, 240, 217, 0.7) 0px, transparent 60%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans), "Inter", sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Atmospheric Pastel-Mesh Backdrop */
+.pastel-mesh-backdrop {
+  background: 
+    radial-gradient(ellipse at 15% 20%, #fff0e6 0%, transparent 60%),
+    radial-gradient(ellipse at 85% 25%, #e9d8ff 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, #e2f0d9 0%, transparent 60%),
+    #fdfbf7;
+}
+
+/* Feature Cards from DESIGN.md */
+.card-feature-cream {
+  background-color: #f4ede4;
+  color: #1d1d1d;
+  border-radius: 16px;
+  border: 1px solid rgba(230, 230, 230, 0.6);
+}
+
+.card-aubergine-band {
+  background-color: #4a154b;
+  color: #ffffff;
+  border-radius: 16px;
+}
+
+/* Statistics Big Numeral */
+.stat-numeral {
+  font-size: 50px;
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  color: #4a154b;
+}
+
+/* Micro-cap eyebrow */
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 90px;
+  background-color: #f4ede4;
+  color: #1d1d1d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+}
+
+/* Custom Scrollbar in refined aubergine tone */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4ede4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d9bdde;
+  border-radius: 90px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a154b;
+}
